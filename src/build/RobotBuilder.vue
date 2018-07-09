@@ -73,6 +73,9 @@ function getNextValidIndex(index, length) {
 
 export default {
   name: 'RobotBuilder',
+  created() {
+    console.log('component created');
+  },
   data() {
     return {
       availableParts,
@@ -176,7 +179,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .part {
     position: relative;
     width: 165px;
@@ -184,8 +187,10 @@ export default {
     border: 3px solid #aaa;
 }
 
-.part img {
-    width: 165px;
+.part {
+    img {
+        width: 165px;
+    }
 }
 
 .top-row {
